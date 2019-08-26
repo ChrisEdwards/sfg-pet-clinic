@@ -2,8 +2,6 @@ package guru.springframework.sfgpetclinic.services.jpa;
 
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.repositories.OwnerRepository;
-import guru.springframework.sfgpetclinic.repositories.PetRepository;
-import guru.springframework.sfgpetclinic.repositories.PetTypeRepository;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -17,7 +15,7 @@ public class OwnerServiceJpa implements OwnerService {
 
     private final OwnerRepository ownerRepository;
 
-    public OwnerServiceJpa(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
+    public OwnerServiceJpa(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
     }
 
